@@ -2,7 +2,7 @@
 // Author: Joseph Ikehara
 // Purpose: Practice with for loops, "Shuffling". Thursday class.
 
-console.log("Hello world");
+// console.log("Hello world");
 
 // var textShuffle = "abcdefghijklmnopqrstuvwxyz".split('');
 // console.log(textShuffle);
@@ -34,18 +34,24 @@ function deckMap(deckIn) {
     var card = "";
 
     if (deckIn[i] <= 13) {
-      card = deckIn[i] + "H";
+      card = deckIn[i] + " of Hearts!";
       console.log("I'm the",card);
     }
     else if (deckIn[i] <= 26) {
-      card = deckin[i] + "C";
-      console.log("I'm a club");
+      //     condition          if    true: do this               else: do this
+      card = (deckIn[i]%13 !==0) ? (deckIn[i] % 13 +" of Clubs!") : "13 of Clubs!";
+      console.log("I'm the",card);
     }
     else if (deckIn[i] <= 39) {
-      console.log("I'm a diamond");
+      card = (deckIn[i]%26) + " of Diamonds!"
+      console.log("I'm the",card);
+    }
+    else if (deckIn[i] <= 52){
+      card = (deckIn[i]%39) + " of Spades!"
+      console.log("I'm the",card);
     }
     else {
-      console.log("I'm a spade");
+      console.log("Too many cards!");
     }
   }
 }
