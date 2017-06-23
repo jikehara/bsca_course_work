@@ -38,4 +38,19 @@ function generateStandardDeck() {
   return cards;
 }
 
-generateStandardDeck();
+function shuffle(deckIn) {
+  for (var i=0; i<deckIn.length; i+=1) {
+    var currentIndex = deckIn.indexOf(deckIn[i]);
+    var swapIndex= deckIn.indexOf(deckIn[Math.floor(Math.random()*deckIn.length)]);
+    var tempCard = deckIn[currentIndex];
+    deckIn[currentIndex] = deckIn[swapIndex];
+    deckIn[swapIndex] = tempCard;
+  }
+  console.log("Shuffled ",deckIn);
+  return deckIn;
+}
+
+var deck1 = generateStandardDeck();
+// console.log(deck1);
+shuffle(deck1);
+console.log(deck1.length);

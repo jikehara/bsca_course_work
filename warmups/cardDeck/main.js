@@ -4,6 +4,9 @@
 
 console.log("Hello world");
 
+// var textShuffle = "abcdefghijklmnopqrstuvwxyz".split('');
+// console.log(textShuffle);
+
 function generateDeck() {
   var cards = [];
   for (var i=1; i<53; i+=1) {
@@ -24,9 +27,33 @@ function shuffle(deckIn) {
   return deckIn;
 }
 
+function deckMap(deckIn) {
+
+  for (var i=0; i<deckIn.length; i+=1) {
+
+    var card = "";
+
+    if (deckIn[i] <= 13) {
+      card = deckIn[i] + "H";
+      console.log("I'm the",card);
+    }
+    else if (deckIn[i] <= 26) {
+      card = deckin[i] + "C";
+      console.log("I'm a club");
+    }
+    else if (deckIn[i] <= 39) {
+      console.log("I'm a diamond");
+    }
+    else {
+      console.log("I'm a spade");
+    }
+  }
+}
+
 var deck1 = generateDeck();
 // console.log(deck1);
-shuffle(deck1);
+// shuffle(deck1);
+deckMap(deck1);
 
 var checkArray = [];
 deck1.forEach(function(card,index) {
@@ -35,4 +62,4 @@ deck1.forEach(function(card,index) {
   }
 });
 
-console.log("Deck size: ",checkArray.length);
+// console.log("Deck size: ",checkArray.length);
