@@ -50,15 +50,17 @@ function printOdd(arrayIn, low, high) {
 // bonus: Tell the function to return numbers, or strings, as a parameter
 var randomItems = [1, "Hello", 5, "GoodBye", 7, 14, "Aloha", 18, 19 ,"Adios", 26, 36, "Ciao"];
 
-// function printNumsOnly(arrayIn) {
-//   for (var i=0; i<arrayIn.length; i+=1) {
-//     // console.log(arrayIn[i]);
-//     if (typeOf arrayIn[i] ==="number") { // why doesn't this work
-//       console.log(arraIn[i]);
-//     }
-//   }
-// }
-// printNumsOnly(randomItems);
+function printNumsOnly(arrayIn) {
+  var tempNums = [];
+  for (var i=0; i<arrayIn.length; i+=1) {
+    // console.log(typeof(arrayIn[i])==="number");
+    if (typeof arrayIn[i] ==="number") { // remember, all lowercase typeof
+      tempNums.push(arrayIn[i]);
+    }
+  }
+  return tempNums;
+}
+console.log(printNumsOnly(randomItems));
 
 // challenge Five
 // loop through the array of customer objects, and print ONLY their names
@@ -85,3 +87,13 @@ function printCustomerNames(arrayIn, letter) {
 // challenge Six
 // loop through the array of customers, and print ONLY customers that are 'gold' and 'paid'
 // bonus: Return a completely new array that meets these conditions.
+function printGoldCustomers(arrayIn) {
+  var tempCustomers = [];
+  for (var i=0; i<arrayIn.length; i+=1) {
+    if (arrayIn[i].tier==="gold") {
+      tempCustomers.push(arrayIn[i]);
+    }
+  }
+  return tempCustomers;
+}
+// console.log(printGoldCustomers(customers));
