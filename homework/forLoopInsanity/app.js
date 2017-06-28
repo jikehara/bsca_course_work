@@ -90,7 +90,7 @@ function printCustomerNames(arrayIn, letter) {
 function printGoldCustomers(arrayIn) {
   var tempCustomers = [];
   for (var i=0; i<arrayIn.length; i+=1) {
-    if (arrayIn[i].tier==="gold") {
+    if (arrayIn[i].tier==="gold" && arrayIn[i].paid) {
       tempCustomers.push(arrayIn[i]);
     }
   }
