@@ -1,0 +1,4 @@
+This code is useful in terminal for running a browser that is your html file.
+Use it in the windows terminal (cmd) instead of the bash ubuntu.
+
+browser-sync start --server --files "*.html, css/*.css, js/*.js"
