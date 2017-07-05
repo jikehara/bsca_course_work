@@ -21,7 +21,6 @@ function Bird(name, species, gender, img, predator) {
   this.gender = gender;
   this.img = img;
   this.predator = predator ? true : false;
-  // birds.push(this);
 }
 
 var b3 = new Bird("Cowbird", "Warbler", "Female", "https://www.allaboutbirds.org/guide/PHOTO/LARGE/brown_headed_cowbird_4.jpg");
@@ -29,7 +28,7 @@ var b4 = new Bird("Blue Jay", "C. cristata", "Female", "http://img-aws.ehowcdn.c
 var b5 = new Bird("Blue Jay", "C. cristata", "Male", "https://www.allaboutbirds.org/guide/PHOTO/LARGE/blue_jay_8.jpg", true);
 var b6 = new Bird("American Crow", "Passerine", "Male", "https://www.allaboutbirds.org/guide/PHOTO/LARGE/american_crow_8.jpg");
 var b7 = new Bird("Andean Condor", "Vultur", "Male", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/AndeanCondorMale.jpg/220px-AndeanCondorMale.jpg");
-// birds.push(b3, b4, b5);
+birds.push(b3, b4, b5, b6, b7);
 console.log(birds);
 
 var app = new Vue({
