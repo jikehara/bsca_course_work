@@ -16,12 +16,13 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
 
     <div id="app">
       <h1>{{ title }}</h1>
-      <div>
+      <div class="bird">
         <div v-for="b in birds">
           <h2>{{ b.name }}</h2>
           <p>{{ b.species }}</p>
@@ -30,23 +31,27 @@
         </div>
       </div>
 
-      <form v-on:submit.prevent="addBird">
-        <div class="col-md-12">
-          <label>Bird Name</label>
-          <input type="text" v-model="name"/>
-        </div>
-        <div class="col-md-12">
-          <label>Bird Species</label>
-          <input type="text" v-model="species"/>
-        </div>
-        <div class="col-md-12">
-          <label>Bird Gender</label>
-          <input type="text" v-model="gender"/>
-        </div>
-        <div class="col-md-12">
-          <label>Bird Image</label>
-          <input type="text" v-model="img"/>
-        </div>
+      <div class="add-bird">
+        <h2>Add a Bird!</h2>
+        <form v-on:submit.prevent="addBird">
+          <div class="col-md-12 bird-attribute">
+            <label>Bird Name</label>
+            <input type="text" v-model="name"/>
+          </div>
+          <div class="col-md-12 bird-attribute">
+            <label>Bird Species</label>
+            <input type="text" v-model="species"/>
+          </div>
+          <div class="col-md-12 bird-attribute">
+            <label>Bird Gender</label>
+            <input type="text" v-model="gender"/>
+          </div>
+          <div class="col-md-12 bird-attribute">
+            <label>Bird Image</label>
+            <input type="text" v-model="img"/>
+          </div>
+      </div>
+
 
         <button type="submit" class="btn btn-primary">Click Here</button>
       </form>
