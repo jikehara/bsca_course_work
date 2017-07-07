@@ -1,0 +1,33 @@
+.flex-container {
+  border: solid 10px #ff0000;
+}
+
+.flex-item {
+  border: solid 3px red;
+  font-size: 35px;
+  text-align: center;
+}
+
+.item1 {
+  background-color: #ffff00
+}
+
+.item2 {
+  background-color: #ffff00
+}
+
+.item3 {
+  background-color: #ffff00
+}
+
+.item4 {
+  background-color: #ffff00
+}
+
+.item5 {
+  background-color: #ffff00
+}
+
+.item6 {
+  background-color: #ffff00
+}
