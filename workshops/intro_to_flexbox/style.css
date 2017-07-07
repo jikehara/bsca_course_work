@@ -1,33 +1,53 @@
 .flex-container {
-  border: solid 10px #ff0000;
+  /*border: solid 10px #993300;*/
+  display: flex; /*defualt behavior is row*/
+  /*flex-direction: column; this will make direction columns*/
+  justify-content: center; /* puts content in center no matter what */
+  height: 400px;
+  flex-wrap: wrap; /*responsive design wrap and nowrap*/
 }
 
 .flex-item {
-  border: solid 3px red;
   font-size: 35px;
   text-align: center;
+  margin: 10px;
+  width: calc(33.3333% - 20px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.guy-image {
+  width: 50%;
 }
 
 .item1 {
-  background-color: #ffff00
+  display: flex;
+  flex-direction: column;
+  background-color: #ffff00;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon-flex {
+  display: flex;
+  justify-content: space-around;
 }
 
 .item2 {
-  background-color: #ffff00
+  background-color: #33cc33;
 }
 
 .item3 {
-  background-color: #ffff00
+  background-color: #33cccc;
 }
 
 .item4 {
-  background-color: #ffff00
+  background-color: #3366ff;
 }
 
 .item5 {
-  background-color: #ffff00
+  background-color: #ff00ff;
 }
 
 .item6 {
-  background-color: #ffff00
+  background-color: #ff5050
 }
