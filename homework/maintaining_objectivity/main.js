@@ -40,7 +40,7 @@ rhcp.bandPlay = function bandPlay(){
 
   bandMembers.forEach(function(bandMember){
     if(typeof(band[bandMember]) === "string"){
-      console.log(bandMembers,"plays the",band[bandMember]);
+      console.log(bandMember,"plays the",band[bandMember]);
     }
   });
 }
