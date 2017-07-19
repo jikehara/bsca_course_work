@@ -24,14 +24,64 @@ var baseballPlayers = [
 
 console.log("Hello from app.js");
 
-var app = new Vue({
-  el: "#app",
-  data: {
-    title: "Baseball Vue App",
-    players: baseballPlayers,
-    name: undefined,
-    HR: undefined,
-    team: undefined,
-    img: undefined
+// var app = new Vue({
+//   el: "#app",
+//   data: {
+//     title: "Baseball Vue App",
+//     players: baseballPlayers,
+//     name: undefined,
+//     HR: undefined,
+//     team: undefined,
+//     img: undefined
+//   }
+// });
+
+// return a map of just players names
+var mappedPlayerNames = baseballPlayers.map(function(item) {
+  return item.name;
+});
+// console.log(mappedPlayerNames);
+
+// return an array of a objects that look like {player: "Barry Bonds", team: "San Francisco Giants"}
+var mappedPlayerNamesAndTeams = baseballPlayers.map(function(item) {
+  return {name: item.name, team: item.team};
+});
+// console.log(mappedPlayerNamesAndTeams);
+
+// return an array of strings that look like "Barry Bonds played for the San Francisco Giants"
+var stringOfPlayersWithTeams = baseballPlayers.map(function(item) {
+  return item.name+" played for the "+item.team;
+});
+// console.log(stringOfPlayersWithTeams);
+
+// return an array of just HomeRuns
+var homeruns = baseballPlayers.map(function(item) {
+  return item.HR;
+});
+// console.log(homeruns);
+
+// return an array of items that have less than 586 HomeRuns
+var homerunsLessThan586 = baseballPlayers.filter(function(item) {
+  if (item.HR<586) {
+    return item.HR;
   }
 });
+// console.log(homerunsLessThan586);
+
+// return just the names of the players that have less than 586 home runs
+var homerunsLessThan586Names = baseballPlayers.filter(function(item) {
+  if (item.HR<586) {
+    return item.HR;
+  }
+}).map(function(item) {
+  return item.name;
+})
+// console.log(homerunsLessThan586Names);
+
+// return an array of players that have more than 370 HR, but less than 400
+var homerunsBetween370And400 = baseballPlayers.filter(function(item) {
+  if (item.HR<400 && item.HR>370) {
+    return item.HR;
+  }
+});
+// console.log(homerunsBetween370And400);
