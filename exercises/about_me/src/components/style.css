@@ -37,3 +37,16 @@
 .nav-bar li:hover {
   text-decoration: underline;
 }
+
+.app-content {
+  width: 75%;
+  display: block;
+  float: left;
+  font-size: 2em;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+}
+
+.contact-sec {
+  text-align: center;;
+}
