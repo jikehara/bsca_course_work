@@ -14,7 +14,7 @@ const FoodItems = (props) => {
   // })
 
   const FilteredBySpice = props.items.filter((items) => {
-    return items.spiceLevel < props.spicy
+    return items.spiceLevel < props.spicy && items.category===props.cat
   }).map((food, index) => {
     return (
       <div key={index} className="food-cards">
