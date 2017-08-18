@@ -12,24 +12,21 @@ class App extends Component {
     this.setState({spiceTolerance: event.target.value})
   }
 
+  // four categories: Amazing Appetizers, Delicious Desserts, Incredible Entrees, Spicy Specials
   // never ever do this again
   updateCategoryAppetizers = () => {
-    // four categories: Amazing Appetizers, Delicious Desserts, Incredible Entrees, Spicy Specials
     this.setState({category: "Amazing Appetizers"})
   }
   // never ever do this again
   updateCategoryDesserts = () => {
-    // four categories: Amazing Appetizers, Delicious Desserts, Incredible Entrees, Spicy Specials
     this.setState({category: "Delicious Desserts"})
   }
   // never ever do this again
   updateCategoryEntrees = () => {
-    // four categories: Amazing Appetizers, Delicious Desserts, Incredible Entrees, Spicy Specials
     this.setState({category: "Incredible Entrees"})
   }
   // never ever do this again
-  updateCategorySpecials= () => {
-    // four categories: Amazing Appetizers, Delicious Desserts, Incredible Entrees, Spicy Specials
+  updateCategorySpecials = () => {
     this.setState({category: "Spicy Specials"})
   }
 
